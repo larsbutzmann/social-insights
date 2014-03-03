@@ -1,0 +1,13 @@
+.margin-top {
+    margin-top: 15px;
+}
+
+.tabs {
+    border: solid #efefef;
+}
+
+.legend {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}

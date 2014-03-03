@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    title Social Insights
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/normalize.css")
+    link(rel="stylesheet", href="css/foundation.css")
+    link(rel="stylesheet", href="css/style.css")
+    script(type='text/javascript', src="js/lib/modernizr.js")
+
+  body
+    div#fb-root
+
+    // header
+    div.row
+      div.medium-12.columns
+        div.nav-bar.right
+          ul.button-group
+            li
+              a.button.margin-top(href="#", data-reveal-id="loginModal" data-reveal) Connect
+        h1 Social Insights
+        hr
+
+    // content
+    div.row
+      div.medium-12.columns
+        dl.tabs.vertical(data-tab)
+          dd
+            a(href="#locationChartTab") Location of Friends
+          dd
+            a(href="#ageChartTab") Age of Friends
+          dd
+            a(href="#relationshipChartTab") Relationship Status
+        div.tabs-content.vertical
+          div#locationChartTab.content
+            canvas#locationChart(width="800", height="400")
+          div#ageChartTab.content
+            canvas#ageChart(width="800", height="400")
+          div#relationshipChartTab.content
+            div#legend
+            canvas#relationshipChart(width="800", height="400")
+
+    // includes
+    include views/login
+
+    script(type='text/javascript', src='js/lib/jquery-2.1.0.min.js')
+    script(type='text/javascript', src='js/lib/foundation/foundation.js')
+    script(type='text/javascript', src='js/lib/foundation/foundation.reveal.js')
+    script(type='text/javascript', src='js/lib/foundation/foundation.tab.js')
+    script(type='text/javascript', src='js/lib/Chart.js')
+
+    script(type='text/javascript', src='js/script.js')

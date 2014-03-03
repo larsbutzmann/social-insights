@@ -1,0 +1,13 @@
+{
+  "name": "askiersdream",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": ">= 3.3.1",
+    "jade": ">= 0.32.0",
+    "ejs": ">= 0.8.5"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
